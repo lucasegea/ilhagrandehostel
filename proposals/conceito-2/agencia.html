@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calytour — Travel Company | Ajudamos a planejar sua viagem</title>
+<meta name="description" content="Calytour, agência parceira do Ilha Grande Hostel: translados, passeios na Ilha, RJ, Angra e Búzios, mergulho e excursões.">
+<link rel="icon" href="assets/logo-hostel.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* agencia.html — self-contained extras */
+.ag-hero{
+  position:relative;color:#fff;overflow:hidden;
+  background:linear-gradient(140deg,var(--teal) 0%,var(--verde) 100%);
+}
+.ag-hero-inner{position:relative;z-index:1;padding:72px 0 80px;}
+.ag-hero h1{color:#fff;max-width:16ch;}
+.ag-hero .eyebrow{color:#ffe1bd;}
+.ag-hero p{color:#eafaf0;font-size:1.12rem;max-width:48ch;}
+.ag-back{
+  display:inline-flex;align-items:center;gap:.4rem;min-height:44px;
+  color:var(--verde);font-family:'Fredoka',sans-serif;font-weight:600;
+}
+.ag-topbar{background:var(--areia);border-bottom:1px solid var(--areia-2);}
+.ag-topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:62px;}
+.ag-services{display:grid;grid-template-columns:1fr;gap:16px;margin-top:2rem;}
+.ag-service{
+  display:flex;gap:1rem;align-items:flex-start;
+  background:var(--branco);border:1px solid var(--areia-2);border-radius:var(--r-lg);
+  padding:20px 22px;box-shadow:var(--shadow-sm);
+}
+.ag-service .ic{font-size:2rem;line-height:1;flex:0 0 auto;}
+.ag-service h3{margin-bottom:.25rem;}
+.ag-service p{color:var(--n1);font-size:.95rem;margin:0;}
+.ag-note{
+  background:var(--areia);border:1px dashed var(--n3);border-radius:var(--r-md);
+  padding:12px 16px;color:var(--n1);font-size:.85rem;margin-top:2rem;text-align:center;
+}
+.ag-cta{
+  background:linear-gradient(140deg,var(--verde) 0%,var(--teal) 100%);
+  color:#fff;border-radius:var(--r-xl);padding:40px 28px;text-align:center;
+  box-shadow:var(--shadow-lg);margin-top:8px;
+}
+.ag-cta h2{color:#fff;}
+.ag-cta p{color:#eafaf0;max-width:46ch;margin-left:auto;margin-right:auto;}
+@media (min-width:680px){ .ag-services{grid-template-columns:1fr 1fr;} }
+@media (min-width:1024px){ .ag-hero-inner{padding:96px 0 100px;} .ag-cta{padding:56px 40px;} }
+</style>
+</head>
+<body>
+
+<!-- topbar -->
+<div class="ag-topbar">
+  <div class="wrap">
+    <a class="brand-link" href="index.html" aria-label="Voltar ao Ilha Grande Hostel">
+      <img class="brand-logo" src="assets/logo-hostel.jpg" alt="Logo do Ilha Grande Hostel">
+      <span class="brand" style="color:var(--teal);">Calytour<small>Travel Company</small></span>
+    </a>
+    <a class="ag-back" href="index.html">← Voltar ao Hostel</a>
+  </div>
+</div>
+
+<!-- hero -->
+<header class="ag-hero">
+  <div class="wrap ag-hero-inner">
+    <span class="eyebrow">Agência parceira do Ilha Grande Hostel</span>
+    <h1>Calytour</h1>
+    <p>Ajudamos a planejar sua viagem. Da chegada ao último mergulho, a gente cuida de cada detalhe para você só aproveitar a Ilha Grande.</p>
+    <div class="hero-ctas" style="margin-top:1.4rem;">
+      <a class="btn btn-wa" href="https://wa.me/5524981566842" target="_blank" rel="noopener">💬 Falar no WhatsApp</a>
+      <a class="btn btn-ghost" href="#servicos" style="background:#fff;border-color:#fff;color:var(--verde);">Ver serviços</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- serviços -->
+<section class="section" id="servicos">
+  <div class="wrap">
+    <span class="eyebrow">O que fazemos</span>
+    <h2>Nossos serviços</h2>
+    <p class="lead">Tudo o que sua viagem precisa, organizado por quem conhece a região de ponta a ponta.</p>
+    <div class="ag-services">
+      <div class="ag-service">
+        <span class="ic">🚘</span>
+        <div>
+          <h3>Translados</h3>
+          <p>Porta a porta entre aeroportos, rodoviárias, cais e o hostel. Chegue sem preocupação.</p>
+        </div>
+      </div>
+      <div class="ag-service">
+        <span class="ic">🚤</span>
+        <div>
+          <h3>Passeios: Ilha, RJ, Angra e Búzios</h3>
+          <p>Lagoa Azul, Lopes Mendes, volta à Ilha e bate-voltas pelo litoral. Roteiros sob medida.</p>
+        </div>
+      </div>
+      <div class="ag-service">
+        <span class="ic">🤿</span>
+        <div>
+          <h3>Mergulho e excursões</h3>
+          <p>Batismo para iniciantes, saídas para credenciados e excursões guiadas pelas melhores águas.</p>
+        </div>
+      </div>
+      <div class="ag-service">
+        <span class="ic">🛏️</span>
+        <div>
+          <h3>Parceria com o Ilha Grande Hostel</h3>
+          <p>Hospede-se no hostel e deixe os passeios prontos com a gente. Reserva e roteiro num só lugar.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="ag-note">🎨 Identidade visual da Calytour a definir. Esta página usa a paleta do hostel como ponte provisória.</p>
+  </div>
+</section>
+
+<!-- vozes da agência -->
+<section class="section vozes" id="vozes-ag">
+  <div class="wrap">
+    <span class="eyebrow">Quem viajou com a gente</span>
+    <h2>Vozes dos passeios</h2>
+    <div class="carousel" id="agCarousel">
+      <div class="carousel-track">
+        <div class="carousel-rail" id="agRail">
+
+          <div class="voz-card">
+            <div class="voz-inner">
+              <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <p class="voz-text">"A Calytour montou translado, barco e mergulho num pacote só. Tudo no horário, sem stress nenhum."</p>
+              <div class="voz-meta">
+                <span class="voz-name">Renata M.<span>Campinas</span></span>
+                <span class="voz-badge google">● Google</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="voz-card">
+            <div class="voz-inner">
+              <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <p class="voz-text">"Pegaram a gente no aeroporto do Rio e levaram até a Ilha. O passeio de barco foi o ponto alto da viagem."</p>
+              <div class="voz-meta">
+                <span class="voz-name">Eduardo e Ana<span>Porto Alegre</span></span>
+                <span class="voz-badge booking">● Booking.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="voz-card">
+            <div class="voz-inner">
+              <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+              <p class="voz-text">"Atendimento no WhatsApp rápido e atencioso. Ajustaram o roteiro do nosso jeito. Recomendo demais."</p>
+              <div class="voz-meta">
+                <span class="voz-name">Felipe A.<span>Salvador</span></span>
+                <span class="voz-badge google">● Google</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-btn" id="agPrev" aria-label="Depoimento anterior">‹</button>
+        <div class="carousel-dots" id="agDots" role="tablist" aria-label="Selecionar depoimento"></div>
+        <button class="carousel-btn" id="agNext" aria-label="Próximo depoimento">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA WhatsApp -->
+<section class="section">
+  <div class="wrap">
+    <div class="ag-cta">
+      <span class="eyebrow" style="color:#ffe1bd;">Vamos planejar?</span>
+      <h2>Fale com a Calytour agora</h2>
+      <p>Conte o que você quer viver na Ilha Grande e a gente monta o roteiro perfeito para você.</p>
+      <div style="margin-top:1.4rem;">
+        <a class="btn btn-wa" href="https://wa.me/5524981566842" target="_blank" rel="noopener">💬 +55 24 98156-6842</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom" style="border-top:none;margin-top:0;">
+      <p>© 2026 Calytour — Travel Company · Parceira do Ilha Grande Hostel. Mockup de proposta.</p>
+      <a href="index.html" style="color:#9fe0c2;font-weight:600;">← Voltar ao Ilha Grande Hostel</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var rail = document.getElementById('agRail');
+  var prev = document.getElementById('agPrev');
+  var next = document.getElementById('agNext');
+  var dotsWrap = document.getElementById('agDots');
+  if (!rail || !prev || !next || !dotsWrap) return;
+
+  var slides = rail.children.length;
+  var index = 0;
+
+  for (var i = 0; i < slides; i++) {
+    var d = document.createElement('button');
+    d.className = 'dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Ir ao depoimento ' + (i + 1));
+    (function(n){ d.addEventListener('click', function(){ go(n); }); })(i);
+    dotsWrap.appendChild(d);
+  }
+
+  function go(n){
+    index = (n + slides) % slides;
+    rail.style.transform = 'translateX(' + (-index * 100) + '%)';
+    var dots = dotsWrap.children;
+    for (var j = 0; j < dots.length; j++){
+      dots[j].classList.toggle('active', j === index);
+    }
+  }
+  prev.addEventListener('click', function(){ go(index - 1); });
+  next.addEventListener('click', function(){ go(index + 1); });
+})();
+</script>
+</body>
+</html>

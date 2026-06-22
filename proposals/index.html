@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ilha Grande Hostel — 3 propostas de landing</title>
+  <link rel="icon" type="image/jpeg" href="conceito-1/assets/logo-hostel.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --terracota:#A0461E; --creme:#FBFBDF; --areia:#ECEBD9; --areia-2:#E6DEC6;
+      --tinta:#3B2418; --texto:#5C4232; --verde:#2F5135; --teal:#2C6E72; --ambar:#C9893F; --branco:#FFFDF2;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Hanken Grotesk",system-ui,sans-serif;background:var(--creme);color:var(--tinta);line-height:1.6;-webkit-font-smoothing:antialiased}
+    .wrap{width:min(100% - 2.5rem,1080px);margin-inline:auto;padding:3rem 0 4rem}
+    header{text-align:center;margin-bottom:2.6rem}
+    header img{height:88px;width:auto;border-radius:14px;margin:0 auto 1.2rem;display:block}
+    h1{font-family:"Fredoka",sans-serif;font-weight:600;font-size:clamp(1.8rem,5vw,2.6rem);color:var(--terracota);line-height:1.1}
+    .sub{color:var(--texto);max-width:620px;margin:0.7rem auto 0}
+    .grid{display:grid;grid-template-columns:1fr;gap:1.4rem}
+    @media(min-width:820px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .card{background:var(--branco);border:1px solid var(--areia-2);border-radius:20px;overflow:hidden;box-shadow:0 18px 40px -22px rgba(58,32,23,.4);display:flex;flex-direction:column}
+    .card__top{padding:1.5rem 1.4rem 0}
+    .tag{display:inline-block;font-family:"Fredoka",sans-serif;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;padding:.28rem .7rem;border-radius:999px;color:var(--branco)}
+    .c1 .tag{background:var(--terracota)} .c2 .tag{background:var(--teal)} .c3 .tag{background:var(--verde)}
+    .swatch{display:flex;gap:.35rem;margin:1rem 0 .4rem}
+    .swatch span{width:26px;height:26px;border-radius:7px;border:1px solid rgba(0,0,0,.06)}
+    .card h2{font-family:"Fredoka",sans-serif;font-size:1.4rem;font-weight:600;margin-top:.7rem;color:var(--tinta)}
+    .card p{color:var(--texto);font-size:.92rem;padding:0 1.4rem;margin-top:.5rem}
+    .meta{font-size:.82rem;color:var(--n2,#9A8268);padding:.6rem 1.4rem 0}
+    .actions{margin-top:auto;padding:1.3rem 1.4rem 1.5rem;display:flex;flex-direction:column;gap:.6rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.8rem 1rem;border-radius:999px;font-weight:600;font-family:"Fredoka",sans-serif;font-size:.95rem;text-decoration:none;transition:transform .15s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn--primary{background:var(--terracota);color:var(--branco)}
+    .c2 .btn--primary{background:var(--teal)} .c3 .btn--primary{background:var(--verde)}
+    .btn--ghost{background:transparent;border:1.5px solid var(--areia-2);color:var(--texto)}
+    .note{margin-top:2.6rem;text-align:center;font-size:.86rem;color:var(--texto)}
+    .note code{background:var(--areia);padding:.15rem .45rem;border-radius:6px;font-size:.82rem}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="conceito-1/assets/logo-hostel.jpg" alt="Ilha Grande Hostel" />
+      <h1>3 propostas de landing</h1>
+      <p class="sub">Três conceitos com estruturas e estéticas distintas, todos dentro do manual de marca. Abra cada um, compare e escolha a direção. Cada proposta inclui a mini-landing da agência Calytour.</p>
+    </header>
+
+    <div class="grid">
+      <!-- Conceito 1 -->
+      <article class="card c1">
+        <div class="card__top">
+          <span class="tag">Conceito 1</span>
+          <div class="swatch">
+            <span style="background:#A0461E"></span><span style="background:#FBFBDF"></span>
+            <span style="background:#E6DEC6"></span><span style="background:#3B2418"></span><span style="background:#C9893F"></span>
+          </div>
+          <h2>A Casa na Ilha</h2>
+        </div>
+        <p>Comunidade primeiro. Rústico-quente: terracota densa, cantos arredondados, sensação de abraço. As vozes aparecem cedo.</p>
+        <p class="meta">Ordem: Hero · A Casa · Vozes · Quartos · Comodidades · Experiências · Calytour · Galeria · Local · Reservar</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="conceito-1/index.html">Ver a landing →</a>
+          <a class="btn btn--ghost" href="conceito-1/agencia.html">Mini-landing Calytour</a>
+        </div>
+      </article>
+
+      <!-- Conceito 2 -->
+      <article class="card c2">
+        <div class="card__top">
+          <span class="tag">Conceito 2</span>
+          <div class="swatch">
+            <span style="background:#2C6E72"></span><span style="background:#2F5135"></span>
+            <span style="background:#A0461E"></span><span style="background:#FBFBDF"></span><span style="background:#C9893F"></span>
+          </div>
+          <h2>Viva a Ilha</h2>
+        </div>
+        <p>Experiência primeiro. Tropical-fresco: verde e teal, ar, cards de tour. O hostel é seu basecamp e a Calytour entra cedo.</p>
+        <p class="meta">Ordem: Hero duplo · Experiências · Calytour · Quartos · Comodidades · Vozes · Galeria · Local · Reservar</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="conceito-2/index.html">Ver a landing →</a>
+          <a class="btn btn--ghost" href="conceito-2/agencia.html">Mini-landing Calytour</a>
+        </div>
+      </article>
+
+      <!-- Conceito 3 -->
+      <article class="card c3">
+        <div class="card__top">
+          <span class="tag">Conceito 3</span>
+          <div class="swatch">
+            <span style="background:#FBFBDF"></span><span style="background:#ECEBD9"></span>
+            <span style="background:#A0461E"></span><span style="background:#3B2418"></span><span style="background:#2F5135"></span>
+          </div>
+          <h2>Ilha Grande, sem pressa</h2>
+        </div>
+        <p>Lugar primeiro. Editorial-minimal: muito creme, tipografia grande, hairlines, terracota pontual. Vozes como pull-quotes.</p>
+        <p class="meta">Ordem: Hero editorial · A Ilha/Local · Sobre · Quartos · Vozes · Experiências · Calytour · Galeria · Reservar</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="conceito-3/index.html">Ver a landing →</a>
+          <a class="btn btn--ghost" href="conceito-3/agencia.html">Mini-landing Calytour</a>
+        </div>
+      </article>
+    </div>
+
+    <p class="note">Dica: para ver com tudo funcionando, sirva a pasta com <code>python -m http.server 8000</code> e abra <code>http://localhost:8000/proposals/</code>. As imagens são placeholders do Unsplash; as vozes são fixtures realistas (Booking/Google).</p>
+  </div>
+</body>
+</html>
