@@ -4,3 +4,6 @@ node_modules/
 *.log
 .vscode/
 .idea/
+
+# lattice activate symlink — machine-specific, never commit
+_brain

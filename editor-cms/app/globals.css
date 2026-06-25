@@ -1,0 +1,86 @@
+:root {
+  /* Brand tokens — Ilha Grande Hostel (aligned to proposals/conceito-1/styles.css) */
+  --terracota: #A0461E;
+  --terracota-esc: #8A3A18;
+  --creme: #FBFBDF;
+  --areia-clara: #ECEBD9;
+  --areia: #ECEBD9;
+  --areia-2: #E6DEC6;
+  --tinta: #3B2418;
+  --texto: #5C4232;
+  --n1: #7A5A44;
+  --n2: #9A8268;
+  --n3: #8A7560;
+  --verde: #2F5135;
+  --teal: #2C6E72;
+  --ambar: #C9893F;
+  --branco: #FFFDF2;
+
+  --radius: 24px;
+  --radius-lg: 28px;
+  --radius-sm: 16px;
+  --shadow-soft: 0 14px 34px -18px rgba(59, 36, 24, 0.42);
+  --shadow-warm: 0 22px 50px -24px rgba(160, 70, 30, 0.42);
+  --maxw: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-text), system-ui, sans-serif;
+  /* light-only: warm creme background with subtle texture (conceito-1) */
+  background-color: var(--creme);
+  background-image:
+    radial-gradient(120% 80% at 100% 0%, rgba(201, 137, 63, 0.10) 0%, transparent 55%),
+    radial-gradient(100% 60% at 0% 100%, rgba(160, 70, 30, 0.07) 0%, transparent 50%),
+    repeating-linear-gradient(135deg, rgba(122, 90, 68, 0.025) 0 2px, transparent 2px 9px);
+  color: var(--texto);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), system-ui, sans-serif;
+  color: var(--tinta);
+  line-height: 1.12;
+  margin: 0 0 0.5em;
+  font-weight: 600;
+}
+
+a {
+  color: var(--terracota-esc);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 3px solid var(--ambar);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "root": { "props": { "title": "Ilha Grande Hostel — fidelity seed" } },
+  "content": [
+    {
+      "type": "hero",
+      "props": {
+        "id": "hero-1",
+        "eyebrow": "Vila do Abraão · Ilha Grande · RJ",
+        "headline": "Aqui você não é hóspede. É da casa.",
+        "subtitle": "Um hostel feito de café caseiro, varanda com rede e gente do mundo todo. Chegue cansado, saia com amigos.",
+        "ctas": [
+          { "label": "Reservar minha cama", "url": "#reservar" },
+          { "label": "Conhecer a casa", "url": "#a-casa" }
+        ],
+        "badges": [
+          { "label": "★ 4,9 · avaliações reais" },
+          { "label": "2 min da praia" },
+          { "label": "Recepção bilíngue" }
+        ]
+      }
+    },
+    {
+      "type": "sobre",
+      "props": {
+        "id": "sobre-1",
+        "eyebrow": "A Casa",
+        "headline": "Uma casa de portas abertas em frente ao mar",
+        "body": "Sem carros, sem pressa. O Ilha Grande Hostel fica a dois minutos da praia de Abraão e na entrada das trilhas. De manhã tem pão quentinho e café passado na hora; à noite tem fogueira na praia e história de viajante. A gente recebe como quem recebe em casa.",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=70",
+        "values": [
+          { "icon": "🤝", "title": "Comunidade primeiro", "description": "Mesas compartilhadas, café coletivo e roteiros montados junto com a galera." },
+          { "icon": "☕", "title": "Café caseiro", "description": "Bolo, frutas da estação e pão fresco todas as manhãs, incluso na diária." },
+          { "icon": "🌅", "title": "Pertinho de tudo", "description": "Vila, barcos, trilhas e mercado a poucos passos. Você chega a pé." },
+          { "icon": "🗣️", "title": "Recepção bilíngue", "description": "Equipe que fala português e inglês e te ajuda a planejar cada dia." }
+        ],
+        "amenities": []
+      }
+    },
+    {
+      "type": "vozes",
+      "props": {
+        "id": "vozes-1",
+        "eyebrow": "Vozes da casa",
+        "headline": "Quem passou por aqui conta",
+        "subtitle": "Opiniões reais de quem dormiu, tomou café e voltou para casa com saudade.",
+        "items": [
+          { "stars": "★★★★★", "quote": "\"Acordar com o som do mar e tomar café com gente do mundo todo. Volto com certeza.\"", "name": "Mariana S.", "city": "São Paulo", "source": "🔵 Google" },
+          { "stars": "★★★★★", "quote": "\"O pessoal organizou nosso passeio de barco pela Calytour, foi impecável. Lopes Mendes é surreal.\"", "name": "Thiago R.", "city": "Belo Horizonte", "source": "🟦 Booking.com" },
+          { "stars": "★★★★☆", "quote": "\"Quartos limpos, localização perfeita pertinho da Vila. Melhor custo-benefício de Abraão.\"", "name": "Camila e Pedro", "city": "Curitiba", "source": "🟦 Booking.com" },
+          { "stars": "★★★★★", "quote": "\"Equipe nota 10, cuidaram de translado e mergulho. Já quero voltar.\"", "name": "Lucas F.", "city": "Niterói", "source": "🔵 Google" }
+        ]
+      }
+    },
+    {
+      "type": "quartos",
+      "props": {
+        "id": "quartos-1",
+        "eyebrow": "Onde dormir",
+        "headline": "Cantos da casa pra cada estilo de viagem",
+        "subtitle": "De cama em dormitório a suíte com vista mar. Diárias ilustrativas, com café da manhã sempre incluso.",
+        "items": [
+          { "name": "Dormitório compartilhado", "description": "Cama em quarto coletivo, armário com chave e o melhor papo da casa logo ali na cozinha.", "price": "R$ 90 /noite", "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=70", "meta": [] },
+          { "name": "Suíte Casal Vista Mar", "description": "Quarto privativo com banheiro próprio e janela pro mar. Para quem quer aconchego a dois.", "price": "R$ 320 /noite", "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=800&q=70", "meta": [] },
+          { "name": "Quarto Família (até 4)", "description": "Espaço para a turma inteira, com camas confortáveis e privacidade para todos.", "price": "R$ 260 /noite", "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=70", "meta": [] }
+        ]
+      }
+    },
+    {
+      "type": "comodidades",
+      "props": {
+        "id": "comodidades-1",
+        "eyebrow": "Comodidades",
+        "headline": "Tudo que faz a casa funcionar",
+        "items": [
+          { "icon": "🍳", "label": "Café da manhã caseiro", "description": "" },
+          { "icon": "🔪", "label": "Cozinha compartilhada", "description": "" },
+          { "icon": "📶", "label": "Wi-Fi rápido", "description": "" },
+          { "icon": "🗣️", "label": "Recepção bilíngue", "description": "" },
+          { "icon": "🪢", "label": "Rede e varanda", "description": "" },
+          { "icon": "🔥", "label": "Fogueira na praia", "description": "" }
+        ]
+      }
+    },
+    {
+      "type": "experiencias",
+      "props": {
+        "id": "experiencias-1",
+        "eyebrow": "Experiências",
+        "headline": "A ilha começa na porta da casa",
+        "subtitle": "Roteiros montados com você, sempre com o apoio da Calytour para os passeios e translados.",
+        "items": [
+          { "name": "Passeio de barco", "description": "Lagoa Azul e Lagoa Verde, com paradas para banho e snorkel.", "image": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?auto=format&fit=crop&w=800&q=70" },
+          { "name": "Trilha a Lopes Mendes", "description": "A praia mais famosa da ilha, no fim de uma trilha pela Mata Atlântica.", "image": "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=800&q=70" },
+          { "name": "Mergulho e snorkel", "description": "Vida marinha de pertinho, com equipe e equipamento pela Calytour.", "image": "https://images.unsplash.com/photo-1535262412227-85541e910204?auto=format&fit=crop&w=1200&q=70" },
+          { "name": "Noites com música", "description": "Violão na varanda, fogueira na areia e gente nova pra chamar de amiga.", "image": "https://images.unsplash.com/photo-1471478331149-c72f17e33c73?auto=format&fit=crop&w=800&q=70" }
+        ]
+      }
+    },
+    {
+      "type": "calytour-tira",
+      "props": {
+        "id": "calytour-tira-1",
+        "text": "Também planejamos seus passeios.",
+        "cta": { "label": "Calytour →", "url": "#calytour" }
+      }
+    },
+    {
+      "type": "calytour-destacada",
+      "props": {
+        "id": "calytour-destacada-1",
+        "eyebrow": "Nosso parceiro de viagens",
+        "headline": "Calytour — a gente cuida do seu roteiro",
+        "body": "Translados, passeios de barco, mergulho e excursões pela Ilha, Rio, Angra e Búzios. Você curte; a Calytour resolve a logística com a parceria oficial do nosso hostel.",
+        "services": [
+          { "icon": "🚘", "label": "Translados" },
+          { "icon": "🚤", "label": "Passeios Ilha, RJ, Angra e Búzios" },
+          { "icon": "🤿", "label": "Mergulho e excursões" },
+          { "icon": "🛏️", "label": "Parceria com o hostel" }
+        ],
+        "cta": { "label": "Conheça a Calytour →", "url": "#calytour" }
+      }
+    },
+    {
+      "type": "galeria",
+      "props": {
+        "id": "galeria-1",
+        "eyebrow": "Galeria",
+        "headline": "Um pedacinho do que te espera",
+        "images": [
+          { "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=70", "alt": "Praia de areia clara e mar azul-turquesa" },
+          { "url": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=800&q=70", "alt": "Quarto aconchegante em tons quentes" },
+          { "url": "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=800&q=70", "alt": "Trilha verde na Mata Atlântica" },
+          { "url": "https://images.unsplash.com/photo-1551918120-9739cb430c6d?auto=format&fit=crop&w=800&q=70", "alt": "Barco navegando em águas calmas" },
+          { "url": "https://images.unsplash.com/photo-1535262412227-85541e910204?auto=format&fit=crop&w=800&q=70", "alt": "Mergulho em recife colorido" },
+          { "url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=70", "alt": "Beliches de madeira no dormitório compartilhado" },
+          { "url": "https://images.unsplash.com/photo-1471478331149-c72f17e33c73?auto=format&fit=crop&w=800&q=70", "alt": "Fogueira na praia ao entardecer" },
+          { "url": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=800&q=70", "alt": "Quarto amplo com luz natural" }
+        ]
+      }
+    },
+    {
+      "type": "localizacao",
+      "props": {
+        "id": "localizacao-1",
+        "eyebrow": "Onde estamos",
+        "headline": "Vila do Abraão, Ilha Grande",
+        "body": "No coração da Vila, em Angra dos Reis (RJ). Uma ilha sem carros — aqui a gente anda a pé e respira fundo.",
+        "image": "",
+        "facts": [
+          { "icon": "📍", "label": "Endereço\nVila do Abraão, Ilha Grande — Angra dos Reis, RJ" },
+          { "icon": "🚤", "label": "Como chegar\nBarco ou lancha saindo de Angra, Mangaratiba ou Conceição de Jacareí" },
+          { "icon": "🌊", "label": "2 min da praia\nE na entrada das trilhas da ilha" },
+          { "icon": "🚗", "label": "Sem carros\nIlha 100% para pedestres" }
+        ]
+      }
+    },
+    {
+      "type": "reservar",
+      "props": {
+        "id": "reservar-1",
+        "eyebrow": "Reservar",
+        "headline": "Garanta seu canto na casa",
+        "subtitle": "",
+        "aside": {
+          "headline": "Prefere conversar?",
+          "body": "Fale direto com a gente no WhatsApp. A mesma equipe que recebe na casa cuida da sua reserva e dos passeios com a Calytour.",
+          "cta": { "label": "💬 Reservar pelo WhatsApp", "url": "https://wa.me/5524981566842" },
+          "facts": [
+            { "label": "Vila do Abraão, Ilha Grande" },
+            { "label": "Angra dos Reis — RJ" }
+          ]
+        }
+      }
+    },
+    {
+      "type": "footer",
+      "props": {
+        "id": "footer-1",
+        "brandName": "Ilha Grande Hostel",
+        "brandDescription": "A casa na ilha. Café caseiro, comunidade e mar a dois minutos, em Vila do Abraão.",
+        "socialLinks": [
+          { "label": "📸", "url": "#" },
+          { "label": "📘", "url": "#" },
+          { "label": "💬", "url": "https://wa.me/5524981566842" }
+        ],
+        "columns": [
+          { "title": "A casa", "links": [ { "label": "A Casa", "url": "#a-casa" }, { "label": "Quartos", "url": "#quartos" }, { "label": "Comodidades", "url": "#comodidades" }, { "label": "Galeria", "url": "#galeria" } ] },
+          { "title": "Viagem", "links": [ { "label": "Experiências", "url": "#experiencias" }, { "label": "Calytour", "url": "#calytour" }, { "label": "Como chegar", "url": "#localizacao" }, { "label": "Reservar", "url": "#reservar" } ] },
+          { "title": "Contato", "links": [ { "label": "WhatsApp +55 24 98156-6842", "url": "https://wa.me/5524981566842" }, { "label": "Pedido de reserva", "url": "#reservar" } ] }
+        ],
+        "copyright": "© 2026 Ilha Grande Hostel · Vila do Abraão, Ilha Grande — RJ"
+      }
+    }
+  ],
+  "zones": {}
+}
