@@ -307,7 +307,7 @@
   color: var(--n1);
 }
 
-/* ---------- Vozes / carrossel ---------- */
+/* ---------- Vozes / grade de depoimentos (mockup agencia.html .a-vozes) ---------- */
 .vozes {
   background: linear-gradient(180deg, var(--areia) 0%, var(--areia-2) 100%);
 }
@@ -319,20 +319,19 @@
   gap: 16px;
   margin-bottom: 26px;
 }
-.carousel {
-  position: relative;
+/* 1 col mobile, 3 cols >=760px, gap 16px (.a-vozes). N items flow 3-per-row. */
+.vozGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
 }
-.carouselViewport {
-  overflow: hidden;
-  border-radius: var(--radius);
-}
-.carouselTrack {
-  display: flex;
-  transition: transform 0.45s cubic-bezier(0.4, 0.1, 0.2, 1);
+@media (min-width: 760px) {
+  .vozGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 .voz {
-  flex: 0 0 100%;
-  padding: 28px 24px;
+  padding: 22px 20px;
   background: var(--branco);
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
@@ -340,12 +339,12 @@
 }
 .voz .stars {
   color: var(--ambar);
-  font-size: 19px;
+  font-size: 18px;
   letter-spacing: 2px;
 }
 .voz blockquote {
-  margin: 12px 0 18px;
-  font-size: 18px;
+  margin: 10px 0 14px;
+  font-size: 16.5px;
   color: var(--tinta);
   line-height: 1.5;
   font-weight: 500;
@@ -353,69 +352,12 @@
 .voz .who {
   font-family: var(--font-display), system-ui, sans-serif;
   font-weight: 600;
-  color: var(--terracota-esc);
+  color: var(--teal);
 }
 .voz .where {
-  font-size: 13.5px;
+  font-size: 13px;
   color: var(--n2);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 4px;
-}
-.badgeSrc {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--areia);
-  border-radius: 999px;
-  padding: 4px 11px;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--n1);
-}
-.carouselControls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 20px;
-}
-.carBtn {
-  width: 48px;
-  height: 48px;
-  border-radius: 999px;
-  background: var(--branco);
-  border: 2px solid rgba(160, 70, 30, 0.28);
-  cursor: pointer;
-  font-size: 20px;
-  color: var(--terracota-esc);
-  display: grid;
-  place-items: center;
-  transition: transform 0.18s, background-color 0.18s;
-}
-.carBtn:hover {
-  background: var(--terracota);
-  color: #fff;
-  border-color: var(--terracota);
-  transform: scale(1.05);
-}
-.dots {
-  display: flex;
-  gap: 8px;
-}
-.dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 999px;
-  background: rgba(122, 90, 68, 0.3);
-  border: 0;
-  padding: 0;
-  cursor: pointer;
-}
-.dotActive {
-  background: var(--terracota);
-  width: 22px;
+  margin-top: 3px;
 }
 
 /* ---------- Quartos ---------- */
@@ -991,11 +933,5 @@
   }
   .footerGrid {
     grid-template-columns: 1.4fr 1fr 1fr 1fr;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .carouselTrack {
-    transition: none !important;
   }
 }

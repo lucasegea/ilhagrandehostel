@@ -1,13 +1,14 @@
 import { Fragment } from "react";
 import type { BlockProps, BlockType } from "../../lib/blocks";
 import s from "./conceito1.module.css";
-import VozesCarousel from "./VozesCarousel";
+import VozesGrid from "./VozesGrid";
 import ReservarForm from "./ReservarForm";
 
 /**
  * Theme conceito1 (7.A): faithful render of proposals/conceito-1/index.html +
- * styles.css. Server-safe components share the CSS module; two client islands
- * (VozesCarousel, ReservarForm) carry the genuine interactivity. Light-mode.
+ * styles.css. Server-safe components share the CSS module; one client island
+ * (ReservarForm) carries the genuine interactivity. Vozes follows the agencia.html
+ * static grid by design, not the index.html carousel. Light-mode.
  */
 
 export const tokens = {
@@ -474,7 +475,7 @@ function Footer(p: BlockProps<"footer">) {
 export const components: Record<BlockType, (props: any) => JSX.Element> = {
   hero: Hero,
   sobre: Sobre,
-  vozes: VozesCarousel,
+  vozes: VozesGrid,
   quartos: Quartos,
   comodidades: Comodidades,
   experiencias: Experiencias,

@@ -23,10 +23,19 @@ const THRESHOLD = 0.1; // per-pixel color tolerance (absorbs AA / font-hinting n
 const SECTION_PASS = 0.06; // <=6% mismatched pixels per section = faithful
 
 // section key -> [mockup selector, render selector]
+//
+// #vozes is intentionally EXCLUDED from this index.html pixel diff. By the user's
+// explicit choice the testimonials follow agencia.html's static `.a-vozes` 3-up grid,
+// NOT index.html's carousel, so an index.html baseline would be a false mismatch.
+// agencia.html cannot serve as a clean pixel baseline either: it hardcodes its own
+// testimonial text (different quotes/lengths), so a diff against the seeded hostel
+// content measures CONTENT, not SHAPE — pixel noise, not a real gate. The grid SHAPE
+// (3x 369px columns, 16px gap at >=760px, matching `.a-vozes`) is verified by Jack's
+// visual screenshot pass. Re-add here only if a head-less, identically-seeded agencia
+// baseline becomes available.
 const SECTIONS = [
   ["hero", ".hero", "#topo"],
   ["a-casa", "#a-casa", "#a-casa"],
-  ["vozes", "#vozes", "#vozes"],
   ["quartos", "#quartos", "#quartos"],
   ["comodidades", "#comodidades", "#comodidades"],
   ["experiencias", "#experiencias", "#experiencias"],
@@ -79,6 +88,7 @@ const rend = await loadFull(browser, HARNESS);
 
 console.log(`baseline (external): ${MOCKUP}`);
 console.log(`render  (seeded):    ${HARNESS}`);
+console.log(`note: #vozes excluded — follows agencia.html grid, verified visually (see SECTIONS comment)`);
 console.log("");
 console.log("section          mismatch   mockup_h  render_h  verdict");
 console.log("---------------- ---------- --------- --------- -------");
