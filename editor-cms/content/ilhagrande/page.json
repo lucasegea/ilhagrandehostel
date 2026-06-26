@@ -185,7 +185,7 @@
       "props": {
         "id": "calytour-tira-1",
         "text": "Também planejamos seus passeios.",
-        "cta": { "label": "Calytour →", "url": "#calytour" }
+        "cta": { "label": "Calytour →", "url": "/calytour" }
       }
     },
     {
@@ -201,7 +201,7 @@
           { "icon": "🚐", "label": "Transfers de entrada e saída" },
           { "icon": "🏝️", "label": "Lopes Mendes, Lagoa Azul, Dois Rios" }
         ],
-        "cta": { "label": "Conheça a Calytour →", "url": "#calytour" }
+        "cta": { "label": "Conheça a Calytour →", "url": "/calytour" }
       }
     },
     {
@@ -283,7 +283,7 @@
             "title": "Viagem",
             "links": [
               { "label": "Experiências", "url": "#experiencias" },
-              { "label": "Calytour", "url": "#calytour" },
+              { "label": "Calytour", "url": "/calytour" },
               { "label": "Como chegar", "url": "#localizacao" },
               { "label": "Reservar", "url": "#reservar" }
             ]

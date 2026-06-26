@@ -519,9 +519,11 @@
   color: #f3e6da;
 }
 
-/* thin Calytour strip */
+/* thin Calytour strip — pulled up toward the experiences cards above (Lucas), clear
+   gap kept below before the orange Calytour section. */
 .calyStrip {
-  margin-top: 26px;
+  margin-top: -36px;
+  margin-bottom: 48px;
   background: linear-gradient(100deg, var(--verde), var(--teal));
   border-radius: var(--radius);
   color: #fff;

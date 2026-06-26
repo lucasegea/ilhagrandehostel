@@ -1,0 +1,90 @@
+/* Shared testimonials grid (DRY, D-CALY-6). Structure is identical across themes;
+   brand colors come from --voz-* variables. Fallbacks reproduce the conceito1
+   (pedido A) look exactly, so the hostel grid is byte-identical without passing any
+   vars; calytour overrides the variables via the `vars` prop. */
+
+.wrap {
+  width: 100%;
+  max-width: var(--voz-maxw, 1180px);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.vozes {
+  padding: 64px 0;
+  background: var(--voz-section-bg, linear-gradient(180deg, #ECEBD9 0%, #E6DEC6 100%));
+}
+
+.vozesHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+.vozesHead h2 {
+  color: var(--voz-heading, #3B2418);
+}
+
+.eyebrow {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: var(--voz-eyebrow, #A0461E);
+  margin: 0 0 10px;
+}
+.lead {
+  font-size: 18px;
+  color: var(--voz-lead, #7A5A44);
+  max-width: 62ch;
+}
+
+/* 1 col mobile, 3 cols >=760px, gap 16px (.a-vozes). N items flow 3-per-row. */
+.vozGrid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+.voz {
+  padding: 22px 20px;
+  background: var(--voz-card-bg, #FFFDF2);
+  border-radius: var(--voz-card-radius, 24px);
+  box-shadow: var(--voz-card-shadow, 0 14px 34px -18px rgba(59, 36, 24, 0.42));
+  margin: 0;
+}
+.voz .stars {
+  color: var(--voz-stars, #C9893F);
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+.voz blockquote {
+  margin: 10px 0 14px;
+  font-size: 16.5px;
+  color: var(--voz-quote, #3B2418);
+  line-height: 1.5;
+  font-weight: 500;
+}
+.voz .who {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 600;
+  color: var(--voz-name, #2C6E72);
+}
+.voz .where {
+  font-size: 13px;
+  color: var(--voz-meta, #9A8268);
+  margin-top: 3px;
+}
+
+@media (min-width: 760px) {
+  .vozGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .vozes {
+    padding: 84px 0;
+  }
+}

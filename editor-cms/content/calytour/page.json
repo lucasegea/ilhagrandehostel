@@ -1,0 +1,108 @@
+{
+  "root": {
+    "props": {
+      "title": "Calytour — Travel Company"
+    }
+  },
+  "content": [
+    {
+      "type": "hero",
+      "props": {
+        "id": "hero-calytour",
+        "eyebrow": "Calytour · Travel Company",
+        "headline": "Ajudamos a planejar sua viagem.",
+        "subtitle": "Translados, passeios de barco, mergulho e excursões pela Ilha Grande, Rio, Angra e Búzios, com a parceria oficial do Ilha Grande Hostel.",
+        "heroImage": "/fotos/hostel1.jpg",
+        "ctas": [],
+        "badges": []
+      }
+    },
+    {
+      "type": "comodidades",
+      "props": {
+        "id": "servicos-calytour",
+        "eyebrow": "",
+        "headline": "O que a gente resolve pra você",
+        "items": [
+          {
+            "icon": "🚘",
+            "label": "Translados",
+            "description": "Transfer porta a porta entre aeroporto, Angra e o cais, sem dor de cabeça com logística."
+          },
+          {
+            "icon": "🚤",
+            "label": "Passeios",
+            "description": "De barco pela Ilha Grande e roteiros no Rio, Angra dos Reis e Búzios."
+          },
+          {
+            "icon": "🤿",
+            "label": "Mergulho e excursões",
+            "description": "Snorkel, mergulho guiado e excursões com equipe e equipamento incluídos."
+          },
+          {
+            "icon": "🛏️",
+            "label": "Parceria com o hostel",
+            "description": "Tudo combinado direto na recepção do Ilha Grande Hostel. Você chega e já está resolvido."
+          }
+        ]
+      }
+    },
+    {
+      "type": "vozes",
+      "props": {
+        "id": "vozes-calytour",
+        "eyebrow": "",
+        "headline": "Quem viajou com a Calytour",
+        "subtitle": "",
+        "items": [
+          {
+            "stars": "★★★★★",
+            "quote": "Montaram o passeio de barco e o translado do cais num instante. Tudo no horário, sem stress.",
+            "name": "Thiago R.",
+            "city": "Belo Horizonte",
+            "source": "Booking.com"
+          },
+          {
+            "stars": "★★★★★",
+            "quote": "Fizemos mergulho com a equipe deles. Profissionais, seguros e super atenciosos. Recomendo demais.",
+            "name": "Lucas F.",
+            "city": "Niterói",
+            "source": "Google"
+          },
+          {
+            "stars": "★★★★★",
+            "quote": "Cuidaram do nosso bate-volta a Búzios saindo da ilha. Roteiro redondo e preço justo.",
+            "name": "Aline M.",
+            "city": "Vitória",
+            "source": "Google"
+          }
+        ]
+      }
+    },
+    {
+      "type": "calytour-destacada",
+      "props": {
+        "id": "cta-calytour",
+        "eyebrow": "",
+        "headline": "Bora planejar seu roteiro?",
+        "body": "Fala com a Calytour no WhatsApp. A gente monta translados, passeios e excursões do jeitinho que cabe na sua viagem.",
+        "services": [],
+        "cta": {
+          "label": "💬 Falar no WhatsApp +55 24 98156-6842",
+          "url": "https://wa.me/5524981566842"
+        }
+      }
+    },
+    {
+      "type": "footer",
+      "props": {
+        "id": "footer-calytour",
+        "brandName": "Calytour",
+        "brandDescription": "",
+        "socialLinks": [],
+        "columns": [],
+        "copyright": "© 2026 Calytour · parceira do Ilha Grande Hostel"
+      }
+    }
+  ]
+}

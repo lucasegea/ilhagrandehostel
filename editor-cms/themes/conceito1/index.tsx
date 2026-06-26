@@ -1,8 +1,29 @@
-import { Fragment } from "react";
+import { Fragment, type CSSProperties } from "react";
 import type { BlockProps, BlockType } from "../../lib/blocks";
 import s from "./conceito1.module.css";
-import VozesGrid from "./VozesGrid";
+import VozesGrid from "../_shared/VozesGrid";
 import ReservarForm from "./ReservarForm";
+
+// Map the shared testimonials grid's --voz-* variables to conceito1's brand tokens,
+// so the hostel grid (pedido A) stays byte-identical while Calytour overrides them.
+const CONCEITO_VOZ_VARS = {
+  "--voz-maxw": "var(--maxw)",
+  "--voz-section-bg": "linear-gradient(180deg, var(--areia) 0%, var(--areia-2) 100%)",
+  "--voz-eyebrow": "var(--terracota)",
+  "--voz-heading": "var(--tinta)",
+  "--voz-lead": "var(--n1)",
+  "--voz-card-bg": "var(--branco)",
+  "--voz-card-radius": "var(--radius)",
+  "--voz-card-shadow": "var(--shadow-soft)",
+  "--voz-stars": "var(--ambar)",
+  "--voz-quote": "var(--tinta)",
+  "--voz-name": "var(--teal)",
+  "--voz-meta": "var(--n2)",
+} as CSSProperties;
+
+const ConceitoVozes = (p: BlockProps<"vozes">) => (
+  <VozesGrid {...p} vars={CONCEITO_VOZ_VARS} />
+);
 
 /**
  * Theme conceito1 (7.A): faithful render of proposals/conceito-1/index.html +
@@ -61,7 +82,7 @@ function SiteHeader() {
     ["#vozes", "Vozes"],
     ["#quartos", "Quartos"],
     ["#experiencias", "Experiências"],
-    ["#calytour", "Calytour"],
+    ["/calytour", "Calytour"],
     ["#localizacao", "Onde estamos"],
   ];
   const mobileLinks: Array<[string, string]> = [
@@ -464,7 +485,7 @@ function Footer(p: BlockProps<"footer">) {
       <div className={`${s.wrap} ${s.footerBottom}`}>
         <span>{p.copyright}</span>
         <span>
-          Passeios por <a href="#calytour">Calytour</a> · Fotos por @____ (drone){" "}
+          Passeios por <a href="/calytour">Calytour</a> · Fotos por @____ (drone){" "}
           {/* TODO-HUMANO: handle do fotógrafo do drone para o crédito */}
         </span>
       </div>
@@ -475,7 +496,7 @@ function Footer(p: BlockProps<"footer">) {
 export const components: Record<BlockType, (props: any) => JSX.Element> = {
   hero: Hero,
   sobre: Sobre,
-  vozes: VozesGrid,
+  vozes: ConceitoVozes,
   quartos: Quartos,
   comodidades: Comodidades,
   experiencias: Experiencias,

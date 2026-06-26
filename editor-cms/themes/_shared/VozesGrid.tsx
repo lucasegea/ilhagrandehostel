@@ -1,11 +1,14 @@
+import type { CSSProperties } from "react";
 import type { BlockProps } from "../../lib/blocks";
-import s from "./conceito1.module.css";
+import s from "./vozes.module.css";
 
 /**
- * Testimonials as a static 3-up grid (mockup proposals/conceito-1/agencia.html
- * `.a-vozes` / `.a-voz`). DELIBERATE deviation from index.html's #vozes carousel:
- * the user chose the agencia grid look. Server component — no interactivity, so it
- * also avoids passing function props (puck/editMode) across the RSC boundary.
+ * Shared testimonials grid (DRY, Atlas D-CALY-6). One presentational component for
+ * the `.a-voz` card pattern from proposals/conceito-1/agencia.html, reused by both
+ * the hostel (conceito1) and Calytour. Brand-variable colors are CSS variables
+ * (`--voz-*`); each theme passes its own values via `vars`, the structure is shared.
+ * Server component (no interactivity), so it never passes function props across the
+ * RSC boundary. Was themes/conceito1/VozesGrid.tsx (pedido A) before the extraction.
  */
 
 // Stored source values carry an emoji prefix ("🔵 Google", "🟦 Booking.com").
@@ -14,11 +17,13 @@ function sourceName(source: string) {
   return source.replace(/^[^\p{L}]+/u, "").trim();
 }
 
-export default function VozesGrid(p: BlockProps<"vozes">) {
+export default function VozesGrid(
+  p: BlockProps<"vozes"> & { vars?: CSSProperties }
+) {
   const items = p.items ?? [];
 
   return (
-    <section className={`${s.section} ${s.vozes}`} id="vozes">
+    <section className={s.vozes} id="vozes" style={p.vars}>
       <div className={s.wrap}>
         <div className={s.vozesHead}>
           <div>
