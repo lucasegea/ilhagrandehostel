@@ -1,6 +1,7 @@
 import type { Config } from "@puckeditor/core";
 import type { ThemeComponents } from "../themes";
 import type { BlockType } from "./blocks";
+import { ImageUploadField } from "../app/admin/ImageUploadField";
 
 /**
  * Puck config builder (Atlas Seam 3, refactor D-CALY-2). The content model
@@ -18,6 +19,26 @@ const cta = {
     label: { type: "text" as const },
     url: { type: "text" as const },
   },
+};
+
+/**
+ * Image fields (M6, D-106). A custom Puck field that uploads to Vercel Blob and writes
+ * the public URL back into the prop. Shared by every image prop (hero/sobre/quartos/
+ * experiencias/galeria/localizacao), including the ones nested inside arrayFields, the
+ * same way `cta` is shared above. The render runs ONLY in the editor (Puck never calls
+ * field renders during the server Render), and ImageUploadField is a "use client"
+ * module, so importing it here keeps the @vercel/blob/client dependency out of the RSC
+ * public-render graph that also imports this config.
+ */
+const imageField = {
+  type: "custom" as const,
+  render: ({
+    value,
+    onChange,
+  }: {
+    value?: string;
+    onChange: (value: string) => void;
+  }) => <ImageUploadField value={value} onChange={onChange} />,
 };
 
 // Seam 6: a block type with no component in the active theme renders nothing + a
@@ -49,7 +70,7 @@ export function buildConfig(components: ThemeComponents): Config {
           eyebrow: { type: "text" },
           headline: { type: "text" },
           subtitle: { type: "textarea" },
-          heroImage: { type: "text" },
+          heroImage: imageField,
           ctas: {
             type: "array",
             arrayFields: { label: { type: "text" }, url: { type: "text" } },
@@ -76,7 +97,7 @@ export function buildConfig(components: ThemeComponents): Config {
           eyebrow: { type: "text" },
           headline: { type: "text" },
           body: { type: "textarea" },
-          image: { type: "text" },
+          image: imageField,
           values: {
             type: "array",
             arrayFields: {
@@ -132,7 +153,7 @@ export function buildConfig(components: ThemeComponents): Config {
               name: { type: "text" },
               description: { type: "textarea" },
               price: { type: "text" },
-              image: { type: "text" },
+              image: imageField,
               meta: {
                 type: "array",
                 arrayFields: { label: { type: "text" } },
@@ -174,7 +195,7 @@ export function buildConfig(components: ThemeComponents): Config {
             arrayFields: {
               name: { type: "text" },
               description: { type: "textarea" },
-              image: { type: "text" },
+              image: imageField,
               duration: { type: "text" },
               tag: { type: "text" },
             },
@@ -222,7 +243,7 @@ export function buildConfig(components: ThemeComponents): Config {
           headline: { type: "text" },
           images: {
             type: "array",
-            arrayFields: { url: { type: "text" }, alt: { type: "text" } },
+            arrayFields: { url: imageField, alt: { type: "text" } },
             getItemSummary: (i: any) => i.alt || "Imagem",
           },
         },
@@ -235,7 +256,7 @@ export function buildConfig(components: ThemeComponents): Config {
           eyebrow: { type: "text" },
           headline: { type: "text" },
           body: { type: "textarea" },
-          image: { type: "text" },
+          image: imageField,
           facts: {
             type: "array",
             arrayFields: { icon: { type: "text" }, label: { type: "text" } },
