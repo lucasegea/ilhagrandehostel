@@ -62,6 +62,26 @@ try {
   ok("PUT content is trailing-newline JSON", decoded.endsWith("\n"));
   ok("PUT content decodes to the page data", deepEqual(JSON.parse(decoded), data));
 
+  // --- serverless: local working-tree mirror is skipped (read-only FS safe) ---
+  // Regression for the EROFS crash on Vercel: savePage must NOT write the local tree
+  // on a read-only serverless FS, yet the authoritative GitHub commit must still fire.
+  await writeFile(PAGE, original, "utf8"); // known bytes before the assertion
+  process.env.GITHUB_TOKEN = "test-token";
+  process.env.VERCEL = "1";
+  const callsV = [];
+  global.fetch = async (url, init = {}) => {
+    callsV.push({ method: init.method || "GET" });
+    if ((init.method || "GET") === "GET") {
+      return { ok: true, status: 200, json: async () => ({ sha: SHA }), text: async () => "" };
+    }
+    return { ok: true, status: 201, json: async () => ({}), text: async () => "" };
+  };
+  await savePage("ilhagrande", data);
+  const afterBytes = await readFile(PAGE, "utf8");
+  ok("VERCEL: local working tree NOT written (read-only FS safe)", afterBytes === original);
+  ok("VERCEL: GitHub commit still fired (GET then PUT)", callsV.length === 2);
+  delete process.env.VERCEL;
+
   // --- fail-clear: no token -> throw, no network ---
   delete process.env.GITHUB_TOKEN;
   const before = calls.length;

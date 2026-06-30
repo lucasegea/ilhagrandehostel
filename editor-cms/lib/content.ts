@@ -104,17 +104,39 @@ export async function loadPage(site: string): Promise<PageData> {
 }
 
 /**
- * Persists a page: validate against the contract, write the local working tree (so
- * local dev reflects the edit immediately), then commit to GitHub. If the commit
- * fails the error propagates to the caller — no silent local-only fallback.
+ * Best-effort local mirror of page.json so `next dev` reflects an edit immediately.
+ * This is a DEV CONVENIENCE, not the source of truth. On Vercel (and any read-only
+ * serverless filesystem) it is a no-op: the lambda FS is read-only and ephemeral, and
+ * the live site refreshes through the GitHub commit + git-connected redeploy below,
+ * never through this write. We skip it proactively when running on Vercel
+ * (process.env.VERCEL) and, as a safety net for other read-only hosts, swallow an
+ * EROFS from the write itself. Any other fs error is a real anomaly and propagates.
+ * This is NOT a "silent local-only fallback" (which the commit forbids): the
+ * authoritative persistence is the GitHub commit, and it stays fail-clear.
+ */
+async function mirrorLocalWorkingTree(site: string, serialized: string): Promise<void> {
+  if (process.env.VERCEL) return;
+  const path = pagePath(site);
+  try {
+    await mkdir(dirname(path), { recursive: true });
+    await writeFile(path, serialized, "utf8");
+  } catch (e) {
+    if ((e as NodeJS.ErrnoException).code === "EROFS") return;
+    throw e;
+  }
+}
+
+/**
+ * Persists a page: validate against the contract, mirror to the local working tree (a
+ * dev convenience, skipped on read-only serverless), then commit to GitHub. The commit
+ * is the authoritative git-as-DB persistence; if it fails the error propagates to the
+ * caller — no silent local-only fallback.
  */
 export async function savePage(site: string, data: PageData): Promise<void> {
   const validated = zPage.parse(data);
   const serialized = JSON.stringify(validated, null, 2) + "\n";
 
-  const path = pagePath(site);
-  await mkdir(dirname(path), { recursive: true });
-  await writeFile(path, serialized, "utf8");
+  await mirrorLocalWorkingTree(site, serialized);
 
   await commitPage(githubConfig(), site, serialized);
 }
