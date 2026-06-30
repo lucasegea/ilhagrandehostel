@@ -2,43 +2,58 @@
 
 import { useRef, useState } from "react";
 import { upload } from "@vercel/blob/client";
+import { isRasterCroppable } from "../../lib/crop";
+import { ImageCropper } from "./ImageCropper";
 
 /**
- * Custom Puck field for image props (M6, D-106). Shows the current Blob URL, a small
- * thumbnail when one is set, and an upload button. Picking a file uploads it DIRECTLY
- * from the browser to Vercel Blob via the SDK's `upload()` (client-direct, so files
- * larger than the ~4.5 MB serverless body limit are supported: the bytes never transit
- * our function), authorized by a short-lived, image-scoped token minted at
- * /api/blob/upload. On success the public Blob URL is pushed back into Puck via
- * onChange, so it lands in the field's prop and, on publish, in page.json (git-as-DB).
+ * Custom Puck field for image props (M6 D-106; recorte real D-crop). Shows the current
+ * Blob URL, a small thumbnail when one is set, and an upload button. Picking a RASTER
+ * image (jpeg/png/webp/avif) now opens a crop rectangle FIRST: the user adjusts it and we
+ * upload the baked, cropped blob, never the original (decisions a/b/c/d in
+ * brain/output/architecture/ilhagrande-crop.md). Non-raster picks (SVG vector, animated
+ * GIF) bypass the cropper and upload as-is (decision e): canvas cannot meaningfully crop
+ * them.
+ *
+ * The upload itself is unchanged: a client-direct PUT straight to Vercel Blob via the
+ * SDK's `upload()`, authorized by a short-lived image-scoped token minted at
+ * /api/blob/upload. On success the public Blob URL is pushed back into Puck via onChange,
+ * so it lands in the field's prop and, on publish, in page.json (git-as-DB).
  *
  * This is the ONLY module that imports @vercel/blob/client, and it is a "use client"
  * component, so the import lives entirely in the editor/client bundle and never reaches
- * the RSC public-render graph (puck.config.tsx is shared by both the editor and the
- * server Render; the field's render only runs in the editor).
+ * the RSC public-render graph. The `uploader` prop is a test seam that defaults to the
+ * real SDK `upload`; Puck never passes it, so production behavior is identical.
  *
- * Fail-clear: an upload error surfaces a readable message in the editor and is never
- * swallowed. The field keeps its previous value on failure, so a failed pick can never
- * silently blank an existing image.
+ * Fail-clear: an upload (or crop) error surfaces a readable message in the editor and is
+ * never swallowed. The field keeps its previous value on failure, so a failed pick can
+ * never silently blank an existing image.
  */
 export function ImageUploadField({
   value,
   onChange,
+  uploader = upload,
 }: {
   value?: string;
   onChange: (value: string) => void;
+  uploader?: typeof upload;
 }) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
+  // Crop state: the picked file + a local objectURL, set only for raster picks. Null when
+  // not cropping. Kept as one object so cancel/confirm/error all clear it atomically.
+  const [crop, setCrop] = useState<{ file: File; url: string } | null>(null);
 
-  async function handlePick(event: React.ChangeEvent<HTMLInputElement>) {
-    const file = event.target.files?.[0];
-    if (!file) return;
+  function revokeCrop() {
+    if (crop) URL.revokeObjectURL(crop.url);
+    setCrop(null);
+  }
+
+  async function uploadBlob(name: string, blob: Blob) {
     setUploading(true);
     setError("");
     try {
-      const result = await upload(file.name, file, {
+      const result = await uploader(name, blob, {
         access: "public",
         handleUploadUrl: "/api/blob/upload",
       });
@@ -48,9 +63,42 @@ export function ImageUploadField({
       setError((err as Error).message || "Falha no upload da imagem.");
     } finally {
       setUploading(false);
-      // Reset the input so re-picking the SAME file fires onChange again.
-      if (inputRef.current) inputRef.current.value = "";
     }
+  }
+
+  function handlePick(event: React.ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+    // Reset the input so re-picking the SAME file fires onChange again.
+    if (inputRef.current) inputRef.current.value = "";
+    if (!file) return;
+    setError("");
+    if (isRasterCroppable(file.type)) {
+      setCrop({ file, url: URL.createObjectURL(file) });
+    } else {
+      // SVG / GIF / unknown: no canvas crop, upload as-is (decision e).
+      void uploadBlob(file.name, file);
+    }
+  }
+
+  function handleConfirmCrop(blob: Blob) {
+    const name = crop?.file.name ?? "imagem";
+    revokeCrop();
+    void uploadBlob(name, blob);
+  }
+
+  function handleCancelCrop() {
+    revokeCrop();
+  }
+
+  if (crop) {
+    return (
+      <ImageCropper
+        src={crop.url}
+        sourceMime={crop.file.type}
+        onConfirm={handleConfirmCrop}
+        onCancel={handleCancelCrop}
+      />
+    );
   }
 
   return (
