@@ -13,13 +13,25 @@
         "headline": "Aqui você não é hóspede. É da casa.",
         "subtitle": "Uma casa de sossego em frente ao mar, no centro de Vila do Abraão. Cozinha completa pra fazer sua comida, espaço pra relaxar e uma equipe que cuida de cada detalhe. Chegue cansado de passear, sinta-se em casa.",
         "ctas": [
-          { "label": "Reservar minha cama", "url": "#reservar" },
-          { "label": "Conhecer a casa", "url": "#a-casa" }
+          {
+            "label": "Reservar minha cama",
+            "url": "#reservar"
+          },
+          {
+            "label": "Conhecer a casa",
+            "url": "#a-casa"
+          }
         ],
         "badges": [
-          { "label": "★ 4,9 · avaliações reais" },
-          { "label": "2 min da praia" },
-          { "label": "Recepção bilíngue" }
+          {
+            "label": "★ 4,9 · avaliações reais"
+          },
+          {
+            "label": "2 min da praia"
+          },
+          {
+            "label": "Recepção bilíngue"
+          }
         ]
       }
     },
@@ -107,29 +119,57 @@
             "name": "Quarto compartilhado · 4 camas",
             "description": "Quarto para até quatro pessoas. Há opções com e sem banheiro privativo.",
             "price": "",
-            "image": "",
-            "meta": [{ "label": "Até 4 camas" }, { "label": "Com ou sem banheiro" }]
+            "image": "https://wq02ecmggvlmwwxm.public.blob.vercel-storage.com/suite-UBzRNRLo6bs9NVHQN7SmxgU2uvRzHe.jpeg",
+            "meta": [
+              {
+                "label": "Até 4 camas"
+              },
+              {
+                "label": "Com ou sem banheiro"
+              }
+            ]
           },
           {
             "name": "Quarto compartilhado · 6 camas",
             "description": "Quarto para até seis pessoas. Há opções com e sem banheiro privativo.",
             "price": "",
             "image": "",
-            "meta": [{ "label": "Até 6 camas" }, { "label": "Com ou sem banheiro" }]
+            "meta": [
+              {
+                "label": "Até 6 camas"
+              },
+              {
+                "label": "Com ou sem banheiro"
+              }
+            ]
           },
           {
             "name": "Quarto com banheiro e varanda",
             "description": "Um dos quartos com banheiro privativo tem varanda própria, pra relaxar com calma.",
             "price": "",
             "image": "",
-            "meta": [{ "label": "Banheiro privativo" }, { "label": "Varanda" }]
+            "meta": [
+              {
+                "label": "Banheiro privativo"
+              },
+              {
+                "label": "Varanda"
+              }
+            ]
           },
           {
             "name": "Estúdio para casal",
             "description": "Estúdio anexo, em frente ao cais, fora do hostel. Privacidade total para um casal.",
             "price": "",
             "image": "",
-            "meta": [{ "label": "Casal" }, { "label": "Anexo · frente ao cais" }]
+            "meta": [
+              {
+                "label": "Casal"
+              },
+              {
+                "label": "Anexo · frente ao cais"
+              }
+            ]
           }
         ]
       }
@@ -141,11 +181,31 @@
         "eyebrow": "Comodidades",
         "headline": "Tudo que faz a casa funcionar",
         "items": [
-          { "icon": "🔪", "label": "Cozinha compartilhada completa", "description": "" },
-          { "icon": "🧺", "label": "Lavanderia", "description": "" },
-          { "icon": "📶", "label": "Wi-Fi", "description": "" },
-          { "icon": "🛋️", "label": "Espaço para relaxar", "description": "" },
-          { "icon": "🛎️", "label": "Recepção bilíngue", "description": "" }
+          {
+            "icon": "🔪",
+            "label": "Cozinha compartilhada completa",
+            "description": ""
+          },
+          {
+            "icon": "🧺",
+            "label": "Lavanderia",
+            "description": ""
+          },
+          {
+            "icon": "📶",
+            "label": "Wi-Fi",
+            "description": ""
+          },
+          {
+            "icon": "🛋️",
+            "label": "Espaço para relaxar",
+            "description": ""
+          },
+          {
+            "icon": "🛎️",
+            "label": "Recepção bilíngue",
+            "description": ""
+          }
         ]
       }
     },
@@ -185,7 +245,10 @@
       "props": {
         "id": "calytour-tira-1",
         "text": "Também planejamos seus passeios.",
-        "cta": { "label": "Calytour →", "url": "/calytour" }
+        "cta": {
+          "label": "Calytour →",
+          "url": "/calytour"
+        }
       }
     },
     {
@@ -196,12 +259,27 @@
         "headline": "Calytour — a gente cuida do seu roteiro",
         "body": "Passeios de lancha, traslados a Lopes Mendes, mergulho e transfers de entrada e saída da ilha. A Calytour leva você a Ilha Grande, Angra, Búzios, Arraial, Cabo Frio, Lagoa Azul, Gruta e Dois Rios. A ideia é simples: aproveite ao máximo Ilha Grande, que a logística fica com a gente. Calytour: 4,9 ⭐ no Google.",
         "services": [
-          { "icon": "🚤", "label": "Passeios de lancha" },
-          { "icon": "🤿", "label": "Mergulho e excursões" },
-          { "icon": "🚐", "label": "Transfers de entrada e saída" },
-          { "icon": "🏝️", "label": "Lopes Mendes, Lagoa Azul, Dois Rios" }
+          {
+            "icon": "🚤",
+            "label": "Passeios de lancha"
+          },
+          {
+            "icon": "🤿",
+            "label": "Mergulho e excursões"
+          },
+          {
+            "icon": "🚐",
+            "label": "Transfers de entrada e saída"
+          },
+          {
+            "icon": "🏝️",
+            "label": "Lopes Mendes, Lagoa Azul, Dois Rios"
+          }
         ],
-        "cta": { "label": "Conheça a Calytour →", "url": "/calytour" }
+        "cta": {
+          "label": "Conheça a Calytour →",
+          "url": "/calytour"
+        }
       }
     },
     {
@@ -211,14 +289,38 @@
         "eyebrow": "Galeria",
         "headline": "Um pedacinho do que te espera",
         "images": [
-          { "url": "", "alt": "Praia de Vila do Abraão" },
-          { "url": "", "alt": "Cozinha compartilhada da casa" },
-          { "url": "", "alt": "Espaço para relaxar" },
-          { "url": "", "alt": "Trilha a Lopes Mendes" },
-          { "url": "", "alt": "Passeio de lancha pela ilha" },
-          { "url": "", "alt": "Mergulho em águas calmas" },
-          { "url": "", "alt": "Quarto da casa" },
-          { "url": "", "alt": "Pôr do sol em Abraão" }
+          {
+            "url": "",
+            "alt": "Praia de Vila do Abraão"
+          },
+          {
+            "url": "",
+            "alt": "Cozinha compartilhada da casa"
+          },
+          {
+            "url": "",
+            "alt": "Espaço para relaxar"
+          },
+          {
+            "url": "",
+            "alt": "Trilha a Lopes Mendes"
+          },
+          {
+            "url": "",
+            "alt": "Passeio de lancha pela ilha"
+          },
+          {
+            "url": "",
+            "alt": "Mergulho em águas calmas"
+          },
+          {
+            "url": "",
+            "alt": "Quarto da casa"
+          },
+          {
+            "url": "",
+            "alt": "Pôr do sol em Abraão"
+          }
         ]
       }
     },
@@ -231,10 +333,22 @@
         "body": "No coração da Vila, em Angra dos Reis (RJ). Uma ilha sem carros, onde a gente anda a pé e respira fundo.",
         "image": "",
         "facts": [
-          { "icon": "📍", "label": "Endereço\nVila do Abraão, Ilha Grande — Angra dos Reis, RJ" },
-          { "icon": "🚤", "label": "Como chegar\nBarco ou lancha saindo de Angra, Mangaratiba ou Conceição de Jacareí" },
-          { "icon": "🌊", "label": "No centro da Vila\nA dois minutos da praia e na entrada das trilhas" },
-          { "icon": "🚗", "label": "Sem carros\nIlha 100% para pedestres" }
+          {
+            "icon": "📍",
+            "label": "Endereço\nVila do Abraão, Ilha Grande — Angra dos Reis, RJ"
+          },
+          {
+            "icon": "🚤",
+            "label": "Como chegar\nBarco ou lancha saindo de Angra, Mangaratiba ou Conceição de Jacareí"
+          },
+          {
+            "icon": "🌊",
+            "label": "No centro da Vila\nA dois minutos da praia e na entrada das trilhas"
+          },
+          {
+            "icon": "🚗",
+            "label": "Sem carros\nIlha 100% para pedestres"
+          }
         ]
       }
     },
@@ -253,8 +367,12 @@
             "url": "https://wa.me/5524981566842"
           },
           "facts": [
-            { "label": "Vila do Abraão, Ilha Grande" },
-            { "label": "Angra dos Reis — RJ" }
+            {
+              "label": "Vila do Abraão, Ilha Grande"
+            },
+            {
+              "label": "Angra dos Reis — RJ"
+            }
           ]
         }
       }
@@ -266,33 +384,69 @@
         "brandName": "Ilha Grande Hostel",
         "brandDescription": "A casa na ilha. Sossego, cozinha compartilhada e mar a dois minutos, no centro de Vila do Abraão.",
         "socialLinks": [
-          { "label": "📸", "url": "#" },
-          { "label": "💬", "url": "https://wa.me/5524981566842" }
+          {
+            "label": "📸",
+            "url": "#"
+          },
+          {
+            "label": "💬",
+            "url": "https://wa.me/5524981566842"
+          }
         ],
         "columns": [
           {
             "title": "A casa",
             "links": [
-              { "label": "A Casa", "url": "#a-casa" },
-              { "label": "Quartos", "url": "#quartos" },
-              { "label": "Comodidades", "url": "#comodidades" },
-              { "label": "Galeria", "url": "#galeria" }
+              {
+                "label": "A Casa",
+                "url": "#a-casa"
+              },
+              {
+                "label": "Quartos",
+                "url": "#quartos"
+              },
+              {
+                "label": "Comodidades",
+                "url": "#comodidades"
+              },
+              {
+                "label": "Galeria",
+                "url": "#galeria"
+              }
             ]
           },
           {
             "title": "Viagem",
             "links": [
-              { "label": "Experiências", "url": "#experiencias" },
-              { "label": "Calytour", "url": "/calytour" },
-              { "label": "Como chegar", "url": "#localizacao" },
-              { "label": "Reservar", "url": "#reservar" }
+              {
+                "label": "Experiências",
+                "url": "#experiencias"
+              },
+              {
+                "label": "Calytour",
+                "url": "/calytour"
+              },
+              {
+                "label": "Como chegar",
+                "url": "#localizacao"
+              },
+              {
+                "label": "Reservar",
+                "url": "#reservar"
+              }
             ]
           },
           {
             "title": "Contato",
             "links": [
-              { "label": "WhatsApp +55 24 98156-6842", "url": "https://wa.me/5524981566842" },
-              { "label": "Pedido de reserva", "url": "#reservar" }
+              {
+                "label": "WhatsApp +55 24 98156-6842",
+                "url": "https://wa.me/5524981566842"
+              },
+              {
+                "label": "Pedido de reserva",
+                "url": "#reservar"
+              }
             ]
           }
         ],
